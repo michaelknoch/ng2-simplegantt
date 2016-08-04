@@ -6,7 +6,7 @@ const tscConfig = require('./tsconfig.json');
 const inlineNg2Template = require('gulp-inline-ng2-template');
 
 gulp.task('ts', ['scss'], () => {
-    return gulp.src(['comp/ng2-simplegantt.comp.ts', 'typings/main.d.ts'])
+    return gulp.src(['comp/**/*.ts', 'typings/main.d.ts'])
         .pipe(typescript(tscConfig.compilerOptions))
         .pipe(gulp.dest('dist/'));
 });

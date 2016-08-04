@@ -1,1 +1,0 @@
-export * from './comp/ng2-simplegantt.comp.ts';
