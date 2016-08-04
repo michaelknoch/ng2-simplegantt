@@ -1,0 +1,21 @@
+{
+  "name": "ng2-simplegantt",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "postinstall": "typings install && gulp build",
+    "typings": "typings",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "@angular/core": "^2.0.0-rc.4",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^2.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-typescript": "^2.13.6"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
