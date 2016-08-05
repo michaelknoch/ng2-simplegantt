@@ -4,11 +4,17 @@ const sass = require('gulp-sass');
 const typescript = require('gulp-typescript');
 const tscConfig = require('./tsconfig.json');
 const inlineNg2Template = require('gulp-inline-ng2-template');
+const merge = require('gulp-merge');
 
 gulp.task('ts', ['scss'], () => {
-    return gulp.src(['comp/**/*.ts', 'typings/main.d.ts'])
+    const tsResult = gulp.src(['comp/**/*.ts', 'typings/main.d.ts'])
         .pipe(typescript(tscConfig.compilerOptions))
-        .pipe(gulp.dest('dist/'));
+
+    return merge([
+        tsResult.js.pipe(gulp.dest('dist')),
+        tsResult.dts.pipe(gulp.dest('dist'))
+    ]);
+
 });
 
 gulp.task('scss', () => {

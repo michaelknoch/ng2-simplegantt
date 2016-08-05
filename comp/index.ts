@@ -1,1 +1,1 @@
-export * from './ng2-simplegantt.comp.ts';
+export * from './ng2-simplegantt.comp';
