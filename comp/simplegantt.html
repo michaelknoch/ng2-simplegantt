@@ -2,7 +2,7 @@
     <div class="relative trace-line fullwidth" *ngFor="let node of nodes">
         <span *ngFor="let inner of node" [ngStyle]="{left: inner.left, right: inner.right}" class="trace-item inner"
               [ngClass]="{'cs': inner.cs}">{{inner.name}} | {{inner.duration / 1000}}ms
-                <span class="fullwidth">{{inner.role}}</span>
+                <span class="role fullwidth">{{inner.role}}</span>
         </span>
 
     </div>
