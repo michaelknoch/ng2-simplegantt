@@ -33,7 +33,9 @@ gulp.task('dist.inline', ['ts', 'scss', 'html'], function () {
         .pipe(inlineNg2Template({
             base: '/dist',
             useRelativePaths: true,
-            supportNonExistentFiles: false
+            supportNonExistentFiles: false,
+            target: 'es5',
+            removeLineBreaks: true
         }))
         .pipe(gulp.dest('dist'));
 });
